@@ -1,3 +1,5 @@
+
+% \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -79,4 +81,14 @@ Since, $\dfrac{y}{x}$ = $\dfrac{z}{y}$;\\
 \begin{align}  
 \notag    x,\; y,\; z \text{ are in G.P.}
 \end{align}
+
+For this G.P, with $x=ar^{3},\;y=ar^{9},\;z=ar^{15}$, the general term $x(n)$ can be defined as: 
+
+\begin{align}
+	x(n)=x\cdot({\frac{y}{x}})^{n-1} \\
+	x(n)=(ar^3)\cdot (\frac{ar^9}{ar^3})^{n-1} \\
+	x(n)=ar^3\cdot ({r^6})^{n-1} \\
+	x(n)=ar^{6n-3}
+\end{align}
+
 \end{document}
