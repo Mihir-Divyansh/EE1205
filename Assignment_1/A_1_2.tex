@@ -1,5 +1,3 @@
-
-% \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -19,7 +17,7 @@
 \usepackage{tkz-euclide} 
 \usepackage{listings}
 \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
+%\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
@@ -29,6 +27,8 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -61,22 +61,22 @@
 If the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P. are x, y, and z, respectively. Prove that $x,\; y,\; z$ are in G.P.\\
 \solution
 
+
 The n$^{th}$ term of a G.P. is $a_n=a_1r^{n-1}$. Given that $x,\; y,\; z$ are the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P.,
 \begin{align}
-\notag    x = a_4 =ar^{4-1}=ar^3 \\
-\notag     y=a_{10}=ar^{10-1}=ar^9 \\
-\notag     z=a_{16}=ar^{16-1}=ar^{15}
+     &x = a_4 =ar^{4-1}=ar^3 \\
+     &y=a_{10}=ar^{10-1}=ar^9 \\
+     &z=a_{16}=ar^{16-1}=ar^{15}
 \end{align}
 
 Consider $\dfrac{y}{x}$ and $\dfrac{z}{y}$;
 
 \begin{align}
-    \dfrac{y}{x} = \dfrac{ar^9}{ar^3} \\
-    \dfrac{y}{x} = r^6\\ \notag\\
-    \dfrac{z}{y} = \dfrac{ar^{15}}{ar^9} \\ 
-    \dfrac{y}{x} = r^6
+    &\dfrac{y}{x} = \dfrac{ar^9}{ar^3} \\
+    &\dfrac{y}{x} = r^6\\ \notag\\
+    &\dfrac{z}{y} = \dfrac{ar^{15}}{ar^9} \\ 
+    &\dfrac{z}{y} = r^6
 \end{align}
-
 Since, $\dfrac{y}{x}$ = $\dfrac{z}{y}$;\\
 \begin{align}  
 \notag    x,\; y,\; z \text{ are in G.P.}
@@ -85,10 +85,44 @@ Since, $\dfrac{y}{x}$ = $\dfrac{z}{y}$;\\
 For this G.P, with $x,\;y,\;z$, as the first three terms, the general term $x(n)$ can be defined as: 
 
 \begin{align}
-\notag	\text{Common Ratio}=\frac{y}{x} \\
-	x(n)=x\cdot({\frac{y}{x}})^{n-1} \\
-	also,\:x(n)=x\cdot (\frac{z}{y})^{n-1} \\
-\notag	\therefore x(n)=\frac{y^{n-1}}{x^{n-2}}
+\notag \text{Common Ratio}=\frac{y}{x} \\
+ x(n)=x\cdot({\frac{y}{x}})^{n-1} \\
+ also,\:x(n)=x\cdot (\frac{z}{y})^{n-1} \\
+\notag \therefore x(n)=\frac{y^{n-1}}{x^{n-2}}\; \forall\; n\geq1
 \end{align}
+To extend the domain of n to -ve integers, the step function $u(n)$ can be used.
+\begin{align}
+\notag    \therefore x(n) = \frac{y^{n-1}}{x^{n-2}}\cdot u(n) \; \forall \;n\in Z
+\end{align}
+
+$a$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the following manner.
+\begin{align}
+\notag      &x=ar^3 \\
+\notag    &\frac{y}{x}=r^6 \\
+    \Rightarrow&r=\sqrt[6]{\frac{y}{x}}=(\frac{y}{x})^{\frac{1}{6}}\\
+\notag    &a=\frac{x}{r^3}\\
+\notag    &a=x\cdot(\frac{x}{y})^{\frac{3}{6}}\\
+    \therefore &a=x^{\frac{3}{2}}y^{-\frac{1}{2}} \\
+    and\; &r=(\frac{y}{x})^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}}
+\end{align}
+
+
+\begin{table}
+    \centering
+        \caption{Given Information}
+    \begin{tabular}{|m{2cm}|m{2cm}|m{2cm}|}
+    \hline
+        $x$ & 4th term & $ar^3$\\ [1ex]
+    \hline
+        $y$ & 10th term& $ar^9$\\ [1ex]
+    \hline
+        $z$ & 16th term& $ar^{15}$\\ [1ex]
+    \hline
+    \end{tabular}
+\end{table}
+
+
+
+
 
 \end{document}
