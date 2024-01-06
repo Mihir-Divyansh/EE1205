@@ -1,3 +1,4 @@
+
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -106,17 +107,22 @@ $a$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the following mann
     and\; &r=(\frac{y}{x})^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}}
 \end{align}
 
-
 \begin{table}
     \centering
         \caption{Given Information}
     \begin{tabular}{|m{2cm}|m{2cm}|m{2cm}|}
     \hline
-        $x$ & 4th term & $ar^3$\\ [1ex]
+    \textbf{Symbol} & \textbf{Value} & \textbf{Description}\\ [1ex]
     \hline
-        $y$ & 10th term& $ar^9$\\ [1ex]
+        $x$ & $ar^3$ & x(4) \\ [1ex]
     \hline
-        $z$ & 16th term& $ar^{15}$\\ [1ex]
+        $y$ & $ar^9$ & x(10)\\ [1ex]
+    \hline
+        $z$ & $ar^{15}$ & x(16)\\ [1ex]
+    \hline
+        $a$ & $x^{\frac{3}{2}}y^{-\frac{1}{2}}$ & x(1) \\[1ex]
+    \hline
+        r & $y^{\frac{1}{6}}x^{-\frac{1}{6}}$ & $\frac{x(n)}{x(n-1)}$\\[1ex]
     \hline
     \end{tabular}
 \end{table}
