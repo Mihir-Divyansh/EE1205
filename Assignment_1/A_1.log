@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  6 JAN 2024 06:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  7 JAN 2024 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,24 +1124,32 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@cols=\count342
 \TX@ftn=\toks48
 )
-\c@theorem=\count343
-\c@problem=\count344
-\c@proposition=\count345
-\c@lemma=\count346
-\c@example=\count347
-\c@rem=\count348
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count343
+\float@exts=\toks49
+\float@box=\box83
+\@float@everytoks=\toks50
+\@floatcapt=\box84
+)
+\c@theorem=\count344
+\c@problem=\count345
+\c@proposition=\count346
+\c@lemma=\count347
+\c@example=\count348
+\c@rem=\count349
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file A_1.aux.
+) (./A_1.aux)
 \openout1 = `A_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 46.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 46.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1220,17 +1228,17 @@ LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
+\scratchcounter=\count350
 \scratchdimen=\dimen333
-\scratchbox=\box83
-\nofMPsegments=\count350
-\nofMParguments=\count351
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count352
+\scratchbox=\box85
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count353
 \MPscratchDim=\dimen334
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
-\everyMPtoPDFconversion=\toks50
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1240,7 +1248,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count355
+\c@lstlisting=\count356
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
 (Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 46.
@@ -1253,6 +1261,8 @@ LaTeX Info: Redefining \ohm on input line 46.
 Package gensymb Info: Using \textohm for \ohm on input line 46.
 Package gensymb Info: Using \textmu for \micro on input line 46.
 Package hyperref Info: Link coloring OFF on input line 46.
+
+(./A_1.out) (./A_1.out)
 \@outlinefile=\write5
 \openout5 = `A_1.out'.
 
@@ -1287,44 +1297,51 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+LaTeX Font Info:    Font shape `OT1/txr/b/sc' in size <9> not available
+(Font)              Font shape `OT1/txr/bx/sc' tried instead on input line 66.
+
+
+Package hyperref Warning: Suppressing empty link on input line 89.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./A_1.aux)
 
-Package rerunfilecheck Warning: File `A_1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `A_1.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.133 \end{document}
+                    ] (./A_1.aux)
+Package rerunfilecheck Info: File `A_1.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30459 strings out of 476091
- 599318 string characters out of 5794082
- 1890330 words of memory out of 5000000
- 50167 multiletter control sequences out of 15000+600000
- 594500 words of font info for 210 fonts, out of 8000000 for 9000
+ 30532 strings out of 476091
+ 600465 string characters out of 5794082
+ 1887330 words of memory out of 5000000
+ 50234 multiletter control sequences out of 15000+600000
+ 595208 words of font info for 211 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,13n,96p,1171b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on A_1.pdf (1 page, 55486 bytes).
+e/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/t
+xfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on A_1.pdf (1 page, 55616 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
