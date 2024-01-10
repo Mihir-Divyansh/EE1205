@@ -14,22 +14,23 @@
 \usepackage{gensymb}
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide}
+\usepackage{tkz-euclide} 
 \usepackage{listings}
 \usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                
+%\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
-\usepackage{longtable}                                      
-\usepackage{calc}                                            
-\usepackage{multirow}                                        
-\usepackage{hhline}                                          
-\usepackage{ifthen}                                          
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
 \usepackage{lscape}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{float}
+
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -69,68 +70,54 @@ If the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P. are x, y, and z, respec
     \hline
     \textbf{Symbol} & \textbf{Value} & \textbf{Description}\\ [1ex]
     \hline
-        $x$ & $ar^4$ & $x(4)$ \\ [1ex]
+        $x$ & $x(0)r^4$ & $x(4)$ \\ [1ex]
     \hline
-        $y$ & $ar^{10}$ & $x(10)$\\ [1ex]
+        $y$ & $x(0)r^{10}$ & $x(10)$\\ [1ex]
     \hline
-        $z$ & $ar^{16}$ & $x(16)$\\ [1ex]
-    \hline
-        $a$ & $x^{\frac{5}{3}}y^{-\frac{2}{3}}$ & x(0) \\[1ex]
+        $z$ & $x(0)r^{16}$ & $x(16)$\\ [1ex]
     \hline
         $r$ & $y^{\frac{1}{6}}x^{-\frac{1}{6}}$ & $\frac{x(n)}{x(n-1)}$\\[1ex]
     \hline \vspace{0.1cm}
-        $x(n)$ & $y^{n-1} x^{2-n} u(n)$ & General Term \\ [1ex]
+        $x(0)$ & $x^{\frac{5}{3}}y^{-\frac{2}{3}}$ & First term \\[1ex]
     \hline
-    \end{tabular}
-\end{table} \label{table}
+        $x(n)$ & $x(0)r^nu(n)$ & General Term \\ [1ex]
+    \hline
+    \end{tabular}\label{Table 1}
+\end{table} 
 
 \solution
 
-
-The n$^{th}$ term of a G.P. is $a_n=ar^n$. Given that $x,\; y,\; z$ are the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P., From the \tabref{table},
+From \tabref{Table 1},
 \begin{align}
-\notag x&= a_4 =ar^4 \\
-\notag y&=a_{10}=ar^{10} \\
-\notag z&=a_{16}=ar^{16}
+\notag x&= x(4) =x(0)r^4 \\
+\notag y&=x(10)=x(0)r^{10} \\
+\notag z&=x(16)=x(0)r^{16}
 \end{align}
-Consider $\dfrac{y}{x}$ and $\dfrac{z}{y}$;
+Consider $\dfrac{x(10)}{x(4)}$ and $\dfrac{x(16)}{x(10)}$;
 \begin{align}
-\dfrac{y}{x} &= \dfrac{ar^{10}}{ar^4} = r^6\\
-\dfrac{z}{y} &= \dfrac{ar^{16}}{ar^{10}} = r^6
+ \dfrac{x(10)}{x(4)} &= \dfrac{x(0)r^{10}}{x(0)r^4} = r^6\\ 
+ \dfrac{x(16)}{x(10)} &= \dfrac{x(0)r^{16}}{x(0)r^{10}} = r^6
 \end{align}
-Since, $\dfrac{y}{x}$ = $\dfrac{z}{y}$;\\
+Since, $\dfrac{x(10)}{x(4)}$ = $\dfrac{x(16)}{x(10)}$;\\
 \begin{align}  
-\notag    x,\; y,\; z \text{ are in G.P.}
+\notag   & x(4),\; x(10),\; x(16)\text{ are in G.P.} \\
+\notag  \therefore & x,\; y,\; z \text{ are in G.P.}
 \end{align}
 
-For this G.P, with $x,\;y,\;z$, as the first three terms, the general term $x(n)$ can be defined as:
 
-\begin{align}
-\notag \text{Common Ratio}&=\frac{y}{x} \\
-x(n)&=x({\frac{y}{x}})^{n-1} \\
-also,\: x(n)&=x\cdot (\frac{z}{y})^{n-1} \\
-\notag \therefore x(n)&=\frac{y^{n-1}}{x^{n-2}}\; \forall\; n\geq0
-\end{align}
 To extend the domain of n to -ve integers, the step function $u(n)$ can be used.
 \begin{align}
-\notag    \therefore x(n) &= \frac{y^{n-1}}{x^{n-2}} u(n) \; \forall \;n\in Z
+ \notag    \therefore x(n) &= x(0)r^n u(n) \; \forall \;n\in Z
 \end{align}
-The initial term $x(0)$ is :
+$x(0)$ $r$ can be expressed in terms of $x$, $y$, and $z$ in the following manner.
 \begin{align}
-    x(0)&=x(n)/r^n\\
-\notag    &=\brak{y^{n-1} x^{2-n} u(n)}\brak{\frac{y}{x}}^{-n}\\
-    x(0)&=\frac{x^2}{y}
-\end{align}
-
-$a$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the following manner.
-\begin{align}
-\notag      x&=ar^4 \\
-\notag    \frac{y}{x}&=r^6 \\
-\Rightarrowr&=\sqrt[6]{\frac{y}{x}}=(\frac{y}{x})^{\frac{1}{6}}\\
-\notag    a&=\frac{x}{r^4}\\
-\notag    a&=x(\frac{x}{y})^{\frac{4}{6}}\\
-\therefore a&=x^{\frac{5}{3}}y^{-\frac{2}{3}} \\
-and\; r&=(\frac{y}{x})^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}}
+ \notag      x&=x(0)r^4 \\
+ \notag    \frac{y}{x}&=r^6 \\
+ \Rightarrow r&=\sqrt[6]{\frac{y}{x}}=(\frac{y}{x})^{\frac{1}{6}}\\
+ \notag    x(0)&=\frac{x}{r^4}\\
+ \notag    x(0)&=x(\frac{x}{y})^{\frac{4}{6}}\\
+ \therefore\; x(0)&=x^{\frac{5}{3}}y^{-\frac{2}{3}} \\
+ and\; r&=(\frac{y}{x})^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}}
 \end{align}
 
 
@@ -138,5 +125,3 @@ and\; r&=(\frac{y}{x})^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}}
 
 
 \end{document}
-
- 
