@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  16 JAN 2024 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  23 JAN 2024 03:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**A1.tex_
-(./A1.tex_
+**A1.tex
+(./A1.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -1312,8 +1312,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.146 																						     \newpage
-                                         ]
+l.146 \newpage
+              ]
 <A_1.png, id=49, 462.528pt x 346.896pt>
 File: A_1.png Graphic file (type png)
 <use A_1.png>
@@ -1324,21 +1324,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.157 ...}																										\end{document}
-                                                  
+l.159 \end{document}
+                    
 
  <./A_1.png>] (./A1.aux)
 Package rerunfilecheck Info: File `A1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30566 strings out of 476091
- 600833 string characters out of 5794082
+ 30565 strings out of 476091
+ 600826 string characters out of 5794082
  1907330 words of memory out of 5000000
  50244 multiletter control sequences out of 15000+600000
  595208 words of font info for 211 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,13n,96p,1171b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,13n,96p,1170b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -1348,7 +1348,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on A1.pdf (2 pages, 68945 bytes).
+Output written on A1.pdf (2 pages, 68817 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
