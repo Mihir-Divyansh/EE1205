@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -14,8 +17,12 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{IEEEtran}
+\@input{Table.aux}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \textbf  {Given Information}}}{1}{table.1}\protected@file@percent }
 \newlabel{Table 1}{{1}{1}{\textbf {Given Information}}{table.1}{}}
+\newlabel{Eqn 4}{{4}{1}{}{equation.0.4}{}}
+\newlabel{Eqn 5}{{5}{1}{}{equation.0.5}{}}
+\newlabel{Eqn 13}{{12}{1}{}{equation.0.12}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Stem Plot of $x(n)$ v/s $n$}}{2}{figure.1}\protected@file@percent }
 \newlabel{fig:1}{{1}{2}{Stem Plot of $x(n)$ v/s $n$}{figure.1}{}}
 \gdef \@abspage@last{2}
