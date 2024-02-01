@@ -85,11 +85,9 @@ Consider $\dfrac{x\brak{10}}{x\brak{4}}$ and $\dfrac{x\brak{16}}{x\brak{10}}$;
  \implies\dfrac{x\brak{10}}{x\brak{4}} &= \dfrac{x\brak{0}r^{10}}{x\brak{0}r^4} = r^6 \label{Eqn 4}\\ 
  \implies\dfrac{x\brak{16}}{x\brak{10}} &= \dfrac{x\brak{0}r^{16}}{x\brak{0}r^{10}} = r^6\label{Eqn 5}
 \end{align}
-From \eqref{Eqn 4} and \eqref{Eqn 5}
-\begin{align}  
-   & x\brak{4},\; x\brak{10},\; x\brak{16}\text{ are in G.P.} \\
-\notag  \therefore & x,\; y,\; z \text{ are in G.P.}
-\end{align}
+From \eqref{Eqn 4} and \eqref{Eqn 5}, $x\brak{4}$, $x\brak{10}$, $x\brak{16}$ are in G.P.\\
+$\therefore$  $x$, $y$, $z$ are in G.P.\\
+
 \item
 $x\brak{0}$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the following manner.
 \begin{align}
@@ -105,7 +103,7 @@ $x\brak{0}$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the follow
 Z-transform:    $x\brak{n} \system{Z} X\brak{z}$
 \begin{align}
     X\brak{z}&= \sum_{n=-\infty}^{\infty} x\brak{n}z^{-n}\\
-    X\brak{z}&=\dfrac{x\brak{0}}{1-rz^{-1}}\: \forall\: |z|>|r|
+    X\brak{z}&=\dfrac{x\brak{0}}{1-rz^{-1}}\: \forall\: \abs{z}>\abs{r}
 \end{align}
 Substituting $r$ and $x\brak{0}$ from \eqref{Eqn 13}, 
 \begin{align}
@@ -113,11 +111,11 @@ Substituting $r$ and $x\brak{0}$ from \eqref{Eqn 13},
 \end{align}
 \item Example 
 \begin{align}
-    \notag\text{Let}\;x\brak{0} =\dfrac{1}{256}\;\text{and}\;r = 2\\     \notag x=x\brak{4}=x\brak{0}r^4 &=\frac{1}{256}\brak{2}^4=\frac{1}{16}\\
+    \text{Let}\;x\brak{0} =\dfrac{1}{256}\;\text{and}\;r = 2\\      x=x\brak{4}=x\brak{0}r^4 &=\frac{1}{256}\brak{2}^4=\frac{1}{16}\\
      \implies x&=\frac{1}{16} \\
-    \notag y=x\brak{10}=x\brak{0}r^{10} &=\frac{1}{256}\brak{2}^{10}=4\\
+     y=x\brak{10}=x\brak{0}r^{10} &=\frac{1}{256}\brak{2}^{10}=4\\
      \implies y&=4 \\
-    \notag z=x\brak{16}=x\brak{0}r^{16} &=\frac{1}{256}\brak{2}^{16}=256\\
+     z=x\brak{16}=x\brak{0}r^{16} &=\frac{1}{256}\brak{2}^{16}=256\\
     \implies z&=256 
 \end{align}
 \newpage
