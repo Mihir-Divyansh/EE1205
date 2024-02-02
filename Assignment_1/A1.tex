@@ -62,35 +62,40 @@
 
 \textbf{Question: }
 If the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P. are x, y, and z, respectively. Prove that $x,\; y,\; z$ are in G.P.
+
+
 \begin{table}[h]
-        \centering
+    \renewcommand\thetable{1}
+    \centering
         \caption{\textbf{Given Information}}
-        \include{Table}\label{tab: 1}
+        \input{tables/table.tex}\label{tab: 1}
 \end{table} 
+
 \solution
+
 \begin{enumerate}
 \item From \tabref{tab: 1},
 \begin{align}
-    x&= x\brak{4} =x\brak{0}r^4 \\
- y&=x\brak{10}=x\brak{0}r^{10} \\
- z&=x\brak{16}=x\brak{0}r^{16}
+    x&= x\brak{3} =x\brak{0}r^3 \\
+ y&=x\brak{9}=x\brak{0}r^{9} \\
+ z&=x\brak{15}=x\brak{0}r^{15}
 \end{align}
-Consider $\frac{x\brak{10}}{x\brak{4}}$ and $\frac{x\brak{16}}{x\brak{10}}$;
+Consider $\frac{x\brak{9}}{x\brak{3}}$ and $\frac{x\brak{15}}{x\brak{9}}$;
 \begin{align}
- \implies\frac{x\brak{10}}{x\brak{4}} &= \frac{x\brak{0}r^{10}}{x\brak{0}r^4} = r^6 \label{eqn: 4}\\ 
- \implies\frac{x\brak{16}}{x\brak{10}} &= \frac{x\brak{0}r^{16}}{x\brak{0}r^{10}} = r^6\label{eqn: 5}
+ \implies\frac{x\brak{9}}{x\brak{3}} &= \frac{x\brak{0}r^{9}}{x\brak{0}r^3} = r^6 \label{eqn: 4}\\ 
+ \implies\frac{x\brak{15}}{x\brak{9}} &= \frac{x\brak{0}r^{15}}{x\brak{0}r^{9}} = r^6\label{eqn: 5}
 \end{align}
-From \eqref{eqn: 4} and \eqref{eqn: 5}, $x\brak{4}$, $x\brak{10}$, $x\brak{16}$ are in G.P.\\
+From \eqref{eqn: 4} and \eqref{eqn: 5}, $x\brak{3}$, $x\brak{9}$, $x\brak{15}$ are in G.P.\\
 $\therefore$  $x$, $y$, $z$ are in G.P.\\
 \item
 $x\brak{0}$ and $r$ can be expressed in terms of $x$, $y$, and $z$ in the following manner.
 \begin{align}
     \implies&\frac{y}{x}=r^6 \\
  \implies& r=\sqrt{6}{\frac{y}{x}}=\brak{\frac{y}{x}}^{\frac{1}{6}}\\
-    \implies&  x=x\brak{0}r^4 \\
-    \implies& x\brak{0}=\frac{x}{r^4}\\
-    &=x\brak{\frac{x}{y}}^{\frac{4}{6}}\\
- \therefore\; x\brak{0}&=x^{\frac{5}{3}}y^{-\frac{2}{3}}\;
+    \implies&  x=x\brak{0}r^3 \\
+    \implies& x\brak{0}=\frac{x}{r^3}\\
+    &=x\brak{\frac{x}{y}}^{\frac{3}{6}}\\
+	\therefore\; x\brak{0}&=x^{\frac{3}{2}}y^{-\frac{1}{2}}\;
  \text{and}\; r=\brak{\frac{y}{x}}^{\frac{1}{6}}= y^{\frac{1}{6}}x^{-\frac{1}{6}} \label{eqn: 13}
 \end{align}
 \item 
@@ -102,16 +107,16 @@ Z-transform:    $x\brak{n} \system{Z} X\brak{z}$
 ROC = \{$z$ : $\abs{z}>\abs{r}$\}\\
 Substituting $r$ and $x\brak{0}$ from \eqref{eqn: 13}, 
 \begin{align}
-     X\brak{z}&=\frac{x^{\frac{5}{3}}y^{-\frac{2}{3}}}{1-{\brak{\frac{y}{x}}^{\frac{1}{6}}}z^{-1}}
+     X\brak{z}&=\frac{x^{\frac{3}{2}}y^{-\frac{1}{2}}}{1-{\brak{\frac{y}{x}}^{\frac{1}{6}}}z^{-1}}
 \end{align}
 \item Example 
 \begin{align}
-    \text{Let}\;x\brak{0} =\frac{1}{256}\;\text{and}\;r = 2\\      x=x\brak{4}=x\brak{0}r^4 &=\frac{1}{256}\brak{2}^4=\frac{1}{16}\\
-     \implies x&=\frac{1}{16} \\
-     y=x\brak{10}=x\brak{0}r^{10} &=\frac{1}{256}\brak{2}^{10}=4\\
-     \implies y&=4 \\
-     z=x\brak{16}=x\brak{0}r^{16} &=\frac{1}{256}\brak{2}^{16}=256\\
-    \implies z&=256 
+    \text{Let}\;x\brak{0} =\frac{1}{256}\;\text{and}\;r = 2\\      x=x\brak{3}=x\brak{0}r^3 &=\frac{1}{256}\brak{2}^3=\frac{1}{16}\\
+     \implies x&=\frac{1}{32} \\
+     y=x\brak{9}=x\brak{0}r^{9} &=\frac{1}{256}\brak{2}^{9}=2\\
+     \implies y&=2 \\
+     z=x\brak{15}=x\brak{0}r^{15} &=\frac{1}{256}\brak{2}^{15}=128\\
+    \implies z&=128
 \end{align}
 \newpage
 \begin{figure}[h]
@@ -119,7 +124,7 @@ Substituting $r$ and $x\brak{0}$ from \eqref{eqn: 13},
     \centering
     \caption{Stem Plot of $x(n)$ v/s $n$}
    % \caption{Stem Plot of $x(n)$ vs $n$}
-    \includegraphics[width=\columnwidth]{A_1.png}
+    \includegraphics[width=\columnwidth]{figs/A_1.png}
         \label{fig:1}
 \end{figure}
 
