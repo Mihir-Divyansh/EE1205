@@ -3,7 +3,7 @@
 
 int main(){
     FILE *ptr;
-    ptr= fopen("series.txt", "w");
+    ptr= fopen("series.dat", "w");
     float x_0=1/256.0;
     float r= 2;
     for(int i=0; i<16; i++){
