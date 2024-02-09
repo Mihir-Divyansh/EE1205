@@ -3,11 +3,12 @@
 
 int main(){
     FILE *ptr;
-    ptr= fopen("series.txt", "w");
-    float x_0=1/256.0;
-    float r= 2;
-    for(int i=0; i<16; i++){
+    ptr= fopen("series.dat", "w");
+    float x_0=1.0;
+    float r= 1.2;
+    for(int i=0; i<17; i++){
         fprintf(ptr, "%f ", x_0*pow(r,i));
     }
-    fprintf(ptr,"%f\n", x_0*pow(r,16));
+    fprintf(ptr, "\b ");
+    return 0;
 }
