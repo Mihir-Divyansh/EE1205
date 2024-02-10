@@ -18,7 +18,7 @@
 \usepackage{tkz-euclide} 
 \usepackage{listings}
 \usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
+\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
@@ -28,10 +28,6 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{float}
-
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -51,19 +47,84 @@
 \vspace{3cm}
 
 \title{10.5.2.7}
-\author{EE23BTECH11017 - Eachempati Mihir Divyansh$^{*}$}
+\author{EE23BTECH11017 - Eachempati Mihir Divyansh$^{*}$% <-this % stops a space
+}
 \maketitle
 \newpage
 \bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question:} Consider the second-order linear differential equation
-\[x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-y=0, \; x\geq 1\]
-with the initial conditions \[y(x=1)=6,\; \;\; \frac{dy}{dx}\big{|}_{x=1}=2.\]
-Then the value of $y$ at $x=2$ is \rule{2cm}{0.1mm}.\\{\hfill{GATE ME 2023}}\\
 
-\textbf{Solution}
-%\fi
+\textbf{Question:} Find the 31st term of an AP whose $11$th term is 38 and the $16$th term is 73.
+\\
+\solution
+% \fi
+\\
+
+\begin{table}[h]
+    \centering
+    \caption{Given Values}
+    \input{tables/table}\label{tab:1}
+\end{table}
+From Table 
+\begin{align}
+x\brak{0}+10d&=38\label{10.5.2.7.eq: 1}\\
+x\brak{0}+15d&=73 \label{10.5.2.7.eq: 2}
+\end{align}
+From  equations \ref{10.5.2.7.eq: 1} and \ref{10.5.2.7.eq: 2}, the augmented matrix is:
+\begin{align}
+ \myvec{
+   1 & 10 & 38
+   \\
+   1 & 15 & 73
+ } 
+ \xleftrightarrow[]{R_2 \rightarrow R_2-R_1} 
+  \myvec{
+   1 & 10 & 38
+   \\
+   0 & 5 & 35
+ } \\
+ \xleftrightarrow[]{R_1 \rightarrow R_1-2R_2} 
+  \myvec{
+   1 & 0 & -32
+   \\
+   0 & 5 & 35
+ } \\
+  \xleftrightarrow[]{R_2 \rightarrow \frac{R_2}{5}} 
+  \myvec{
+   1 & 0 & -32
+   \\
+   0 & 1 & 7
+ } \\
+ \implies \myvec{
+   x\brak{0}
+   \\
+   d
+ }
+ =
+ \myvec{
+   -32
+   \\
+   7
+ }
+ \end{align}
+ The general term and the Z-transform are given by
+
+ \begin{align}
+    x\brak{n}&=\brak{-32+7n}u\brak{n}\\ 
+ \end{align}
+
+The 31st term of this A.P. is 
+\begin{align}x\brak{30}&=178\end{align}
+ From \eqref{eq:APSum}, the Z-Transform of $x\brak{n}$ is given by 
+\begin{align}
+    X\brak{z}&=\frac{-32}{1-z^{-1}}+\frac{7z^{-1}}{\brak{1-z^{-1}}^2}
+\end{align}
+ \begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/fig1.png}
+    \caption{Stem plot of $x(0)$ v/s $n$}
+ \end{figure}
 
 \end{document}
