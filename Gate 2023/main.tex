@@ -65,11 +65,12 @@ Then the value of $y$ at $x=2$ is \rule{2cm}{0.1mm}.{\hfill{GATE ME 2023}}\\
 
 \solution
 %\fi
-\begin{table}[h]
+\begin{table}[h!]
     \centering
     \include{tables/table}
     \caption{Given Information} \label{gateME49.tab:1}
 \end{table}
+
 Consider the Mellin transform as the combined operation of substituting $x$ by $e^{-x}$ and subsequently taking the laplace transform: 
 \begin{align}
     y(x)\system{M}\int_{-\infty}^{\infty} x^{s-1}y(x){dx} 
@@ -79,7 +80,7 @@ Properties of the Mellin transform include
 \begin{align}
     y'(x) &\system{M} -(s-1)Y(s-1)\\
     xy'(x) &\system{M} -s Y(s)\\
-    (x\frac{d}{dx})^nf&\system{M} (-s)^nY(s) 
+    (x\frac{d}{dx})^ny&\system{M} (-s)^nY(s) 
 \end{align}
 If the initial conditions are zero. To modify this, consider the definition of Mellin transform. 
 \begin{align}
@@ -92,7 +93,7 @@ Integrating by parts,
     &\system{M} x^sy(x)\big{|}_1^{\infty} -sY(s)\\
     &\system{M} \lim_{x\rightarrow{\infty}} (x^s y(x))-y(1)-sY(s)
 \end{align} 
-Subject to $\lim_{x\rightarrow{\infty}} (x^s y(x))=0$, 
+Subject to $\lim_{x\rightarrow{\infty}} (x^s y(x))=0$ from \eqref{gateME49.eq:22}, 
 \begin{align}
     (x\frac{dy}{dx}) &\system{M} -y(1)-sY(s)
 \end{align}
@@ -105,9 +106,9 @@ The given differential equation can be written as:
     x\frac{d}{dx}(x\frac{dy}{dx})&=y,\;\;x\geq 1\\
     \implies (x\frac{d}{dx})^2y&=y
 \end{align}
-Taking Mellin transform on both sides, 
+Taking Mellin transform on both sides, and from \eqref{gateME49.eq:26} 
 \begin{align}
-    s^2Y(s)+sy(1)-y'(1)=Y(s)
+    s^2Y(s)+sy(1)-y'(1)=Y(s),\;\;s<-1
 \end{align}
 From \tabref{gateME49.tab:1}
 \begin{align}
@@ -125,9 +126,16 @@ Taking inverse Mellin transform is equivalent to taking an inverse laplace trans
 \end{align}
 Substituting $x$ by $-\ln x$
 \begin{align}
-    y(x)&=-4x-\frac{2}{x}\\
-    \implies y(2)&=-8
+    y(x)&=-4x-\frac{2}{x}
 \end{align}
+To find ROC of s, substituting y(x) in the limit
+\begin{align} 
+    &\lim_{x\rightarrow \infty} x^s \brak{-4x-\frac{2}{x}}=0\\ \label{gateME49.eq:22}
+    \implies& \lim_{x\rightarrow \infty} \brak{4x^{s+1}+2x^{s-1}}=0\\
+    \implies& \Re s+1<0,\;\Re s-1<0\\
+    \implies& \Re s<-1\label{gateME49.eq:26}
+\end{align}
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{figs/fig.png}

@@ -11,11 +11,11 @@ import matplotlib.pyplot as plt
 
 y=np.loadtxt("values.dat", delimiter=' ')
 
-n1=range(0,1000)
-n2=range(1000, 2000)
+n1=range(0,100)
+n2=range(100, 200)
 # Generate x values
-x_p_values = np.linspace(0.01, 5, 1000)  
-x_n_values = np.linspace(-5, -0.01, 1000)
+x_p_values = np.linspace(0.01, 5, 100)  
+x_n_values = np.linspace(-5, -0.01, 100)
 # Calculate y values
 y_p_values = y[n2]
 y_n_values = y[n1]
