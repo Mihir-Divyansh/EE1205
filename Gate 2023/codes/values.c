@@ -18,9 +18,10 @@ int main(){
         y_n[k]=-y_n[k];
         fprintf(fptr, "%f ", y_p[k]);
     }
+    y_n[99]=-y_n[99];
     fprintf(fptr, "%f\n", y_p[99]);
     for(int k=0; k<99; k++){
-        fprintf(fptr, "%f ", y_n[98-k]);
+        fprintf(fptr, "%f ", y_n[99-k]);
     }
     fprintf(fptr, "%f", y_n[0]);
     return 0;

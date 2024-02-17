@@ -50,7 +50,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{10.5.2.7}
+\title{Question 49, ME Gate 2023}
 \author{EE23BTECH11017 - Eachempati Mihir Divyansh$^{*}$}
 \maketitle
 \newpage
@@ -75,14 +75,14 @@ Consider the Mellin Transform
 \begin{align}
     y(x)\system{M}\int_{-\infty}^{\infty} x^{s-1}y(x){dx} 
 \end{align}
- $$Y(s)=\int_{-\infty}^{\infty} x^{s-1}y(x){dx} $$ 
+ Let $$Y(s)=\int_{-\infty}^{\infty} x^{s-1}y(x){dx} $$ 
  Properties of the Mellin transform for a system at initial rest include 
 \begin{align}
     y'(x) &\system{M} -(s-1)Y(s-1)\\
     xy'(x) &\system{M} -s Y(s)\\
     (x\frac{d}{dx})^ny&\system{M} (-s)^nY(s) 
 \end{align}
-To modify this, evaluatin the Mellin Transform specifically,
+To modify this, evaluating the Mellin Transform specifically,
 \begin{align}
     (x\frac{dy}{dx}) &\system{M} \int_{-\infty}^{\infty} x^{s-1}(x\frac{dy}{dx}){dx}, \;\;x\geq1\\ 
     &\system{M} \int_{1}^{\infty} x^{s}(\frac{dy}{dx}){dx}
@@ -93,20 +93,18 @@ Integrating by parts,
     &\system{M} x^sy(x)\big{|}_1^{\infty} -sY(s)\\
     &\system{M} \lim_{x\rightarrow{\infty}} (x^s y(x))-y(1)-sY(s)
 \end{align} 
-Subject to $\lim_{x\rightarrow{\infty}} (x^s y(x))=0$ from \eqref{gateME49.eq:22}, 
+Let \begin{align} L=\lim_{x\rightarrow{\infty}} (x^s y(x)) \label{gateME49.eq: 10}\end{align}
+Subject to $L=0$, from \eqref{gateME49.eq:24}, 
 \begin{align}
-    (x\frac{dy}{dx}) &\system{M} -y(1)-sY(s)
-\end{align}
-Similarly, 
-\begin{align}
+    (x\frac{dy}{dx}) &\system{M} -y(1)-sY(s)\\
     (x\frac{d}{dx})^2 y &\system {M} s^2Y(s)+sy(1)-y'(1)
 \end{align}
 The given differential equation can be written as: 
 \begin{align}
     x\frac{d}{dx}(x\frac{dy}{dx})&=y,\;\;x\geq 1\\
-    \implies (x\frac{d}{dx})^2y&=y
+    \implies (x\frac{d}{dx})^2y&=y,\;\;x\geq 1
 \end{align}
-Taking Mellin transform on both sides, and from \eqref{gateME49.eq:26} 
+Taking Mellin transform on both sides, and from \eqref{gateME49.eq:27} 
 \begin{align}
     s^2Y(s)+sy(1)-y'(1)=Y(s),\;\;s<-1
 \end{align}
@@ -119,21 +117,22 @@ Property of Laplace Transform
 \begin{align}
      e^{at} \system{L} \frac{1}{s-a},\;\; \Re s>a 
 \end{align}
-Taking inverse Mellin transform is equivalent to taking an inverse laplace transform and substituting $x$ by $-\ln x$.
-\begin{align}
-    -\frac{4}{s+1}-\frac{2}{s-1}\system{L^{0}} -4e^{-x}-2e^{x}\\
+Taking inverse Mellin transform,
+ \begin{align}
+    Y(s) \system{M^{-0}} y(x) \equiv Y(s) \system{L^{-0}} y(e^{-x})\\
+    -\frac{4}{s+1}-\frac{2}{s-1}\system{L^{-0}} -4e^{-x}-2e^{x}\\
     \implies L^{-1} \cbrak{Y(s)} = -4e^{-x}-2e^{x}
 \end{align}
 Substituting $x$ by $-\ln x$
 \begin{align}
     y(x)&=-4x-\frac{2}{x}
 \end{align}
-To find ROC of s, substituting y(x) in the limit
+To find ROC of s, substituting y(x) in \eqref{gateME49.eq: 10}
 \begin{align} 
-    &\lim_{x\rightarrow \infty} x^s \brak{-4x-\frac{2}{x}}=0\\ \label{gateME49.eq:22}
+    &\lim_{x\rightarrow \infty} x^s \brak{-4x-\frac{2}{x}}=0\\ \label{gateME49.eq:24}
     \implies& \lim_{x\rightarrow \infty} \brak{4x^{s+1}+2x^{s-1}}=0\\
     \implies& \Re s+1<0,\;\Re s-1<0\\
-    \implies& \Re s<-1\label{gateME49.eq:26}
+    \implies& \Re s<-1\label{gateME49.eq:27}
 \end{align}
 
 \begin{figure}[h]
