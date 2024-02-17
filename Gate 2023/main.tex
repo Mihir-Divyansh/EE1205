@@ -71,18 +71,18 @@ Then the value of $y$ at $x=2$ is \rule{2cm}{0.1mm}.{\hfill{GATE ME 2023}}\\
     \caption{Given Information} \label{gateME49.tab:1}
 \end{table}
 
-Consider the Mellin transform as the combined operation of substituting $x$ by $e^{-x}$ and subsequently taking the laplace transform: 
+Consider the Mellin Transform
 \begin{align}
     y(x)\system{M}\int_{-\infty}^{\infty} x^{s-1}y(x){dx} 
 \end{align}
-Let $Y(s)=\int_{-\infty}^{\infty} x^{s-1}y(x){dx} $
-Properties of the Mellin transform include 
+ $$Y(s)=\int_{-\infty}^{\infty} x^{s-1}y(x){dx} $$ 
+ Properties of the Mellin transform for a system at initial rest include 
 \begin{align}
     y'(x) &\system{M} -(s-1)Y(s-1)\\
     xy'(x) &\system{M} -s Y(s)\\
     (x\frac{d}{dx})^ny&\system{M} (-s)^nY(s) 
 \end{align}
-If the initial conditions are zero. To modify this, consider the definition of Mellin transform. 
+To modify this, evaluatin the Mellin Transform specifically,
 \begin{align}
     (x\frac{dy}{dx}) &\system{M} \int_{-\infty}^{\infty} x^{s-1}(x\frac{dy}{dx}){dx}, \;\;x\geq1\\ 
     &\system{M} \int_{1}^{\infty} x^{s}(\frac{dy}{dx}){dx}

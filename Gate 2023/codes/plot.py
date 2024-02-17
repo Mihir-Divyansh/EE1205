@@ -2,28 +2,23 @@
 #from sympy import plot_implicit, Eq
 #from sympy.abc import x, y
 
-#a = -4
-#b = 2
-#plot_implicit(Eq(y-a*x-b/x,0), (x, -10, 10), (y, -10, 10))
+# a = -4
+# b = 2
+# plot_implicit(Eq(y-a*x-b/x,0), (x, -10, 10), (y, -10, 10))
 
 import numpy as np
 import matplotlib.pyplot as plt
+#loads values of positive and negative y
+y_p=np.loadtxt("values.dat", delimiter=' ', max_rows=1)
+y_n=np.loadtxt("values.dat", delimiter=' ', max_rows=1, skiprows=1)
 
-y=np.loadtxt("values.dat", delimiter=' ')
+#generate x values
+x_p= np.linspace(0.01, 5, 100)  
+x_n = np.linspace(-5, -0.01, 100)
 
-n1=range(0,100)
-n2=range(100, 200)
-# Generate x values
-x_p_values = np.linspace(0.01, 5, 100)  
-x_n_values = np.linspace(-5, -0.01, 100)
-# Calculate y values
-y_p_values = y[n2]
-y_n_values = y[n1]
-
-
-
-plt.plot(x_p_values, y_p_values, color='blue', label='$y = -4x - \\dfrac{2}{x}$')
-plt.plot(x_n_values, y_n_values, color='blue')
+#plot the graph
+plt.plot(x_p, y_p, color='blue', label='$y = -4x - \\dfrac{2}{x}$')
+plt.plot(x_n, y_n, color='blue')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Plot of $y(x)$')
