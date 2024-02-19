@@ -60,7 +60,7 @@
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question:} Consider the second-order linear differential equation
 \[x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-y=0, \; x\geq 1\]
-with the initial conditions $$y(x=1)=6,\; \;\; \frac{dy}{dx}\big{|}_{x=1}=2.$$
+with the initial conditions $$y(x=1)=-6,\; \;\; \frac{dy}{dx}\big{|}_{x=1}=2.$$
 Then the value of $y$ at $x=2$ is \rule{2cm}{0.1mm}.{\hfill{GATE ME 2023}}\\
 
 \solution
@@ -73,31 +73,31 @@ Then the value of $y$ at $x=2$ is \rule{2cm}{0.1mm}.{\hfill{GATE ME 2023}}\\
 
 Consider the Mellin Transform
 \begin{align}
-    y(x)\system{M}\int_{-\infty}^{\infty} x^{s-1}y(x){dx} 
+    y(x)\system{M}\int_{-\infty}^{\infty} x^{v-1}y(x){dx} 
 \end{align}
- Let $$Y(s)=\int_{-\infty}^{\infty} x^{s-1}y(x){dx} $$ 
+ Let $$Y(v)=\int_{-\infty}^{\infty} x^{v-1}y(x){dx} $$ 
  Properties of the Mellin transform for a system at initial rest include 
 \begin{align}
-    y'(x) &\system{M} -(s-1)Y(s-1)\\
-    xy'(x) &\system{M} -s Y(s)\\
-    (x\frac{d}{dx})^ny&\system{M} (-s)^nY(s) 
+    y'(x) &\system{M} -(v-1)Y(v-1)\\
+    xy'(x) &\system{M} -v Y(v)\\
+    (x\frac{d}{dx})^ny&\system{M} (-v)^nY(v) 
 \end{align}
 To modify this, evaluating the Mellin Transform specifically,
 \begin{align}
-    (x\frac{dy}{dx}) &\system{M} \int_{-\infty}^{\infty} x^{s-1}(x\frac{dy}{dx}){dx}, \;\;x\geq1\\ 
-    &\system{M} \int_{1}^{\infty} x^{s}(\frac{dy}{dx}){dx}
+    (x\frac{dy}{dx}) &\system{M} \int_{-\infty}^{\infty} x^{v-1}(x\frac{dy}{dx}){dx}, \;\;x\geq1\\ 
+    &\system{M} \int_{1}^{\infty} x^{v}(\frac{dy}{dx}){dx}
 \end{align} 
 Integrating by parts, 
 \begin{align}
-    (x\frac{dy}{dx}) &\system{M} [x^s\int \frac{dy}{dx}dx ]\big{|}_1 ^{\infty}-\int_1^{\infty} sx^{s-1}y(x)dx\\
-    &\system{M} x^sy(x)\big{|}_1^{\infty} -sY(s)\\
-    &\system{M} \lim_{x\rightarrow{\infty}} (x^s y(x))-y(1)-sY(s)
+    (x\frac{dy}{dx}) &\system{M} [x^v\int \frac{dy}{dx}dx ]\big{|}_1 ^{\infty}-\int_1^{\infty} vx^{v-1}y(x)dx\\
+    &\system{M} x^vy(x)\big{|}_1^{\infty} -vY(v)\\
+    &\system{M} \lim_{x\rightarrow{\infty}} (x^v y(x))-y(1)-vY(v)
 \end{align} 
-Let \begin{align} L=\lim_{x\rightarrow{\infty}} (x^s y(x)) \label{gateME49.eq: 10}\end{align}
+Let \begin{align} L=\lim_{x\rightarrow{\infty}} (x^v y(x)) \label{gateME49.eq: 10}\end{align}
 Subject to $L=0$, from \eqref{gateME49.eq:24}, 
 \begin{align}
-    (x\frac{dy}{dx}) &\system{M} -y(1)-sY(s)\\
-    (x\frac{d}{dx})^2 y &\system {M} s^2Y(s)+sy(1)-y'(1)
+    (x\frac{dy}{dx}) &\system{M} -y(1)-vY(v)\\
+    (x\frac{d}{dx})^2 y &\system {M} v^2Y(v)+vy(1)-y'(1)
 \end{align}
 The given differential equation can be written as: 
 \begin{align}
@@ -106,33 +106,37 @@ The given differential equation can be written as:
 \end{align}
 Taking Mellin transform on both sides, and from \eqref{gateME49.eq:27} 
 \begin{align}
-    s^2Y(s)+sy(1)-y'(1)=Y(s),\;\;s<-1
+    v^2Y(v)+vy(1)-y'(1)=Y(v),\;\;v<-1
 \end{align}
 From \tabref{gateME49.tab:1}
 \begin{align}
-    Y(s)&=s^2Y(s)+6s-2\\
-    \implies Y(s)&= \frac{6s-2}{1-s^2}\\&=-\frac{4}{s+1}-\frac{2}{s-1}
+    Y(v)&=v^2Y(v)+6v-2\\
+    \implies Y(v)&= \frac{6v-2}{1-v^2}\\&=-\frac{4}{v+1}-\frac{2}{v-1}
 \end{align}
-Property of Laplace Transform 
+Mellin Inversion theorem
 \begin{align}
-     e^{at} \system{L} \frac{1}{s-a},\;\; \Re s>a 
+    Y(s) \system{M^{-1}} \frac{1}{2\pi j} \lim_{T \rightarrow \infty}\int_{a-jT}^{a+jT} x^vY(v)dv
 \end{align}
-Taking inverse Mellin transform,
- \begin{align}
-    Y(s) \system{M^{-0}} y(x) \equiv Y(s) \system{L^{-0}} y(e^{-x})\\
-    -\frac{4}{s+1}-\frac{2}{s-1}\system{L^{-0}} -4e^{-x}-2e^{x}\\
-    \implies L^{-1} \cbrak{Y(s)} = -4e^{-x}-2e^{x}
-\end{align}
-Substituting $x$ by $-\ln x$
+Here, there are 2 poles corresponding to $v=1$ and $v=-1$. The limits of integration indicate a contour that can be assumed to cover a plane on eiher side of the verical line $x=a$.
 \begin{align}
-    y(x)&=-4x-\frac{2}{x}
+    y(x)=\frac{1}{2\pi j}\lim_{T\rightarrow \infty} \int_{1-jT}^{1+jT}x^v Y(v)dv 
 \end{align}
-To find ROC of s, substituting y(x) in \eqref{gateME49.eq: 10}
+This can be thought of as a contour encompassing the plane on the left of $x=1$.
+Therefore
+\begin{align}
+    y(x)=\frac{1}{2\pi j}\lim_{T\rightarrow \infty} \int_{1-jT}^{1+jT} \brak{-\frac{4x^v}{v+1}-\frac{2x^v}{v-1}}dv 
+\end{align}
+By Cauchy's Reidue Theorem
+\begin{align}
+    y(x)&=-\frac{1}{0!}\lim_{v\rightarrow -1} \brak{v+1} \frac{4x^v}{v+1} - \frac{1}{0!}\lim_{v\rightarrow 1}\brak{v-1} \frac{2x^v}{v-1} \\
+    &= -\frac{4}{x} -2x
+\end{align}
+To find ROC of v, substituting y(x) in \eqref{gateME49.eq: 10}
 \begin{align} 
-    &\lim_{x\rightarrow \infty} x^s \brak{-4x-\frac{2}{x}}=0\\ \label{gateME49.eq:24}
-    \implies& \lim_{x\rightarrow \infty} \brak{4x^{s+1}+2x^{s-1}}=0\\
-    \implies& \Re s+1<0,\;\Re s-1<0\\
-    \implies& \Re s<-1\label{gateME49.eq:27}
+    &\lim_{x\rightarrow \infty} x^v \brak{-2x-\frac{4}{x}}=0\\ \label{gateME49.eq:24}
+    \implies& \lim_{x\rightarrow \infty} \brak{4x^{v-1}+2x^{v+1}}=0\\
+    \implies& \Re \brak{v+1}<0,\;\Re \brak{v-1}<0\\
+    \implies& \Re v<-1\label{gateME49.eq:27}
 \end{align}
 
 \begin{figure}[h]
