@@ -42,7 +42,7 @@ float* f(float* input, int stepNum){
     float* output=(float*)malloc(stepNum*sizeof(int));
     for(int j=0; j<stepNum; j++){
         //f(x)
-        output[j]=-4*input[j]-2/input[j];
+        output[j]=4*input[j]+2/input[j];
     }
     return output;
     free(output);
