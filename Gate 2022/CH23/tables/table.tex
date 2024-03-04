@@ -6,8 +6,20 @@
     \hline 
     $d$ & - & Disturbance \\[1.5ex]
     \hline
-    $G_1$ & ${\frac{2e^{-s}}{5s+1}}$ & \multirow{2}{*}{Transfer functions} \\[2ex]
+    $H$ & ? & Transfer function of the system\\
+    \hline
+    $G_1$ & ${\frac{2e^{-s}}{5s+1}}$ & \multirow{2}{*}{Gains Given} \\[2ex]
     \cline{1-2}
     $G_2$ & ${\frac{3e^{-s}}{8s+1}}$ & \\[2ex]
     \hline
-\end{tabular}
+    $P_1$ & $-G_2G_{ff}$ &  Gain of the $1$st forward path\\
+    \hline 
+    $P_2$ & $G_1$ &  Gain of the $2$nd forward path\\
+    \hline 
+    $\Delta$ & 1 & Determinant of the graph\\
+    \hline 
+    $\Delta_1$ & 1 & Determinant of the graph removing the $1$st forward path\\
+    \hline
+    $\Delta_2$ & 1 & Determinant of the graph removing the $2$nd forward path\\
+    \hline
+    \end{tabular}
