@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.2.17)  27 MAR 2024 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.2.9)  3 APR 2024 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/user/EE1205/EE1205/Audio Filtering/main.tex"
-(/home/user/EE1205/EE1205/Audio Filtering/main.tex
+**"/home/md/EE1205/EE1205/Audio Filtering/main.tex"
+(/home/md/EE1205/EE1205/Audio Filtering/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16> (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -1054,133 +1054,126 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 54
 File: ts1txr.fd 2000/12/15 v3.1
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 71.
- (./codes/1.py)
-<figs/Before_audiofilter.png, id=31, 825.0825pt x 553.06625pt>
-File: figs/Before_audiofilter.png Graphic file (type png)
-<use figs/Before_audiofilter.png>
-Package pdftex.def Info: figs/Before_audiofilter.png  used on input line 81.
-(pdftex.def)             Requested size: 201.60077pt x 135.13531pt.
+ (./codes/filter.py)
+<figs/Spectrogram.png, id=31, 462.528pt x 346.896pt>
+File: figs/Spectrogram.png Graphic file (type png)
+<use figs/Spectrogram.png>
+Package pdftex.def Info: figs/Spectrogram.png  used on input line 82.
+(pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
+<figs/Spectrogram_Reduced_Noise.png, id=33, 462.528pt x 346.896pt>
+File: figs/Spectrogram_Reduced_Noise.png Graphic file (type png)
+<use figs/Spectrogram_Reduced_Noise.png>
+Package pdftex.def Info: figs/Spectrogram_Reduced_Noise.png  used on input line 88.
+(pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figs/After_audiofilter.png, id=33, 825.0825pt x 553.06625pt>
-File: figs/After_audiofilter.png Graphic file (type png)
-<use figs/After_audiofilter.png>
-Package pdftex.def Info: figs/After_audiofilter.png  used on input line 87.
-(pdftex.def)             Requested size: 201.60077pt x 135.13531pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./figs/Before_audiofilter.png> <./figs/After_audiofilter.png>]
-<figs/x_n and y_n.png, id=92, 462.528pt x 346.896pt>
+ <./figs/Spectrogram.png> <./figs/Spectrogram_Reduced_Noise.png>]
+<figs/x_n and y_n.png, id=90, 462.528pt x 346.896pt>
 File: figs/x_n and y_n.png Graphic file (type png)
 <use figs/x_n and y_n.png>
-Package pdftex.def Info: figs/x_n and y_n.png  used on input line 119.
+Package pdftex.def Info: figs/x_n and y_n.png  used on input line 120.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
  [2 <./figs/x_n and y_n.png>]
-<figs/H(z)_3.5.png, id=132, 462.528pt x 346.896pt>
-File: figs/H(z)_3.5.png Graphic file (type png)
-<use figs/H(z)_3.5.png>
-Package pdftex.def Info: figs/H(z)_3.5.png  used on input line 246.
+<figs/H(z)_1.png, id=133, 462.528pt x 346.896pt>
+File: figs/H(z)_1.png Graphic file (type png)
+<use figs/H(z)_1.png>
+Package pdftex.def Info: figs/H(z)_1.png  used on input line 247.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/hn.png, id=137, 462.528pt x 346.896pt>
+<figs/hn.png, id=138, 462.528pt x 346.896pt>
 File: figs/hn.png Graphic file (type png)
 <use figs/hn.png>
-Package pdftex.def Info: figs/hn.png  used on input line 279.
+Package pdftex.def Info: figs/hn.png  used on input line 280.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
- [3 <./figs/H(z)_3.5.png> <./figs/hn.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 307--313
+ [3 <./figs/H(z)_1.png> <./figs/hn.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--314
 
  []
 
 <figs/hndef.png, id=172, 462.528pt x 346.896pt>
 File: figs/hndef.png Graphic file (type png)
 <use figs/hndef.png>
-Package pdftex.def Info: figs/hndef.png  used on input line 322.
+Package pdftex.def Info: figs/hndef.png  used on input line 323.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 <figs/y_by_conv.png, id=177, 462.528pt x 346.896pt>
 File: figs/y_by_conv.png Graphic file (type png)
 <use figs/y_by_conv.png>
-Package pdftex.def Info: figs/y_by_conv.png  used on input line 347.
+Package pdftex.def Info: figs/y_by_conv.png  used on input line 348.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 [4 <./figs/hndef.png> <./figs/y_by_conv.png>]
-<figs/verify_y_n.png, id=207, 462.528pt x 346.896pt>
+<figs/verify_y_n.png, id=208, 462.528pt x 346.896pt>
 File: figs/verify_y_n.png Graphic file (type png)
 <use figs/verify_y_n.png>
-Package pdftex.def Info: figs/verify_y_n.png  used on input line 399.
+Package pdftex.def Info: figs/verify_y_n.png  used on input line 400.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/y_n_matrix_DFT.png, id=209, 462.528pt x 346.896pt>
+<figs/y_n_matrix_DFT.png, id=210, 462.528pt x 346.896pt>
 File: figs/y_n_matrix_DFT.png Graphic file (type png)
 <use figs/y_n_matrix_DFT.png>
-Package pdftex.def Info: figs/y_n_matrix_DFT.png  used on input line 443.
+Package pdftex.def Info: figs/y_n_matrix_DFT.png  used on input line 444.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--468
+Underfull \hbox (badness 10000) in paragraph at lines 465--469
 
  []
 
 [5 <./figs/verify_y_n.png> <./figs/y_n_matrix_DFT.png>]
-<figs/Audio_Filter_verf.png, id=237, 462.528pt x 346.896pt>
+<figs/Audio_Filter_verf.png, id=238, 462.528pt x 346.896pt>
 File: figs/Audio_Filter_verf.png Graphic file (type png)
 <use figs/Audio_Filter_verf.png>
-Package pdftex.def Info: figs/Audio_Filter_verf.png  used on input line 475.
+Package pdftex.def Info: figs/Audio_Filter_verf.png  used on input line 476.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Overfull \hbox (27.65247pt too wide) detected at line 490
+Overfull \hbox (27.65247pt too wide) detected at line 491
 []
  []
 
 
-Overfull \hbox (7.96732pt too wide) detected at line 498
+Overfull \hbox (7.96732pt too wide) detected at line 499
 []
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 518--520
+Underfull \hbox (badness 2460) in paragraph at lines 519--521
 \OT1/txr/m/n/12 The be-low code com-putes the val-ues of
  []
 
 (./tables/audio_filter_tab.tex
-Overfull \hbox (11.15627pt too wide) in paragraph at lines 5--14
+Overfull \hbox (11.15599pt too wide) in paragraph at lines 5--14
  [][] 
  []
 
 )
-<figs/h(n)_6.2.png, id=245, 462.528pt x 346.896pt>
+<figs/h(n)_6.2.png, id=246, 462.528pt x 346.896pt>
 File: figs/h(n)_6.2.png Graphic file (type png)
 <use figs/h(n)_6.2.png>
-Package pdftex.def Info: figs/h(n)_6.2.png  used on input line 526.
+Package pdftex.def Info: figs/h(n)_6.2.png  used on input line 527.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \vbox (badness 2698) has occurred while \output is active []
+Underfull \vbox (badness 3049) has occurred while \output is active []
 
  [6 <./figs/Audio_Filter_verf.png>]
-<figs/Filter_Response.png, id=270, 462.528pt x 346.896pt>
+<figs/Filter_Response.png, id=271, 462.528pt x 346.896pt>
 File: figs/Filter_Response.png Graphic file (type png)
 <use figs/Filter_Response.png>
-Package pdftex.def Info: figs/Filter_Response.png  used on input line 543.
+Package pdftex.def Info: figs/Filter_Response.png  used on input line 544.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
  [7 <./figs/h(n)_6.2.png> <./figs/Filter_Response.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C50489AC4B237CCA6623115DF81D02F2;673.
  ) 
 Here is how much of TeX's memory you used:
- 46436 strings out of 476091
- 1075782 string characters out of 5794081
+ 46437 strings out of 476091
+ 1075801 string characters out of 5794082
  2123330 words of memory out of 5000000
  65903 multiletter control sequences out of 15000+600000
  594033 words of font info for 211 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 117i,17n,118p,1215b,1227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,17n,118p,1213b,1629s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 341532 bytes).
+Output written on main.pdf (7 pages, 432686 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 170 named destinations out of 1000 (max. 500000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
+ 171 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

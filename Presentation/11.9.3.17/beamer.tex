@@ -1,0 +1,111 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{gvv}
+%\usepackage{mihir}
+% \pagestyle{empty}% for cropping
+% \usepackage{minted,newtxtext,newtxmath,caption}
+% \newcommand\code{\texttt}
+% \newcommand\param{\textit}
+% \DeclareCaptionFont{bfmath}{\boldmath\bfseries}
+% \DeclareCaptionFormat{ruled}{\hrulefill\par#1#2#3}
+% \captionsetup{format=ruled,font=bfmath}
+\begin{document}
+
+\title{NCERT 11.9.3.17}
+\author{EE23BTECH11017 - Eachempati Mihir Divyansh$^{*}$}
+\date{}
+\frame{\titlepage}
+\begin{frame}   
+\frametitle{Question}
+If the $4^{th}$, $10^{th}$ and $16^{th}$ terms of a G.P. are $x$, $y$, and $z$, respectively. Prove that $x,\; y,\; z$ are in G.P.
+\end{frame}
+\begin{frame}{allowframebreaks}
+\frametitle{Given Informatn}
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+            \textbf{Symbol} & \textbf{Value} & \textbf{Description}\\ 
+            \hline
+                $x$ & $x\brak{0}r^3$ & $x\brak{4}$ \\ 
+            \hline
+                $y$ & $x\brak{0}r^{9}$ & $x\brak{10}$\\
+            \hline
+                $z$ & $x\brak{0}r^{15}$ & $x\brak{16}$\\ 
+            \hline
+                $r$ & ? & $\frac{x\brak{n}}{x\brak{n-1}}$\\
+            \hline \vspace{0.1cm}
+                $x\brak{0}$ & ? & First term \\
+            \hline
+                $x\brak{n+1}$ & $x\brak{0}r^nu\brak{n}$ & $\brak{n+1}^{th}$ term \\
+            \hline
+        \end{tabular}
+        \caption{Given Information}
+        \label{tab:1}
+    \end{table}
+\end{frame}
+\begin{frame}{allowframebreaks}
+\frametitle{Solution: Part 1}
+3 numbers $x$, $y$ and $z$ are in G.P. if 
+\begin{align}
+\frac{y}{x} = \frac{z}{y} \label{eqn: 1}
+\end{align}
+
+From \tabref{tab:1}
+\begin{align}
+    \frac{y}{x} = \frac{x\brak{0}r^9}{x\brak{0}r^3} = r^6 = \frac{x\brak{0}r^{15}}{x\brak{0}r^9} = \frac{z}{y}
+    \label{eqn: 2}
+\end{align}
+By \eqref{eqn: 1} and \eqref{eqn: 2}, $x$, $y$ and $z$ are in G.P.
+\end{frame}
+\begin{frame}{allowframebreaks}
+    \frametitle{Expressing $x(0)$ and $r$ in terms of $x$ and $y$}
+    From \eqref{eqn: 2}, 
+    \begin{align}
+        r^6=\frac{y}{x}\;\;
+        &\implies r=\sqrt[6]{\frac{y}{x}}=\brak{\dfrac{y}{x}}^{\frac{1}{6}}\\
+        x\brak{0}=\frac{x}{r^3}\;\;
+        &\implies x\brak{0}=\brak{\dfrac{x^3}{y}}^{\frac{1}{2}}
+    \end{align}
+    Z-Transform of $x\brak{0}$
+    \begin{align}
+        X\brak{z}&=\frac{x\brak{0}}{1-rz^{-1}}\\
+        &=\dfrac{\brak{\frac{x^3}{y}}^{\frac{1}{2}}}{1-\brak{\frac{y}{x}}^{\frac{1}{6}}z^{-1}}
+    \end{align}
+\end{frame}
+\begin{frame}{allowframebreaks}
+    \frametitle{Exaample}
+    Let $x(0)=1$ and $r=1.2$
+\begin{align}
+    x=x\brak{3}=& \brak{1.2}^3 \\
+    y=x\brak{9}=&\brak{1.2}^9\\
+    z=x\brak{15}=&\brak{1.2}^{15}
+\end{align}
+\end{frame}
+\begin{minted}[bgcolor=bg, linenos, fontsize=\small, breaklines, language=c, lexer=minted-clang]{c}
+    #include<stdio.h>
+#include<math.h>
+
+int main(){
+    FILE *ptr;
+    ptr= fopen("series.dat", "w");
+    float x_0=1.0;
+    float r= 1.2;
+    for(int i=0; i<17; i++){
+        fprintf(ptr, "%f ", x_0*pow(r,i));
+    }
+    fprintf(ptr, "\b ");
+    return 0;
+}
+\end{minted}
+\end{frame}
+\end{document}

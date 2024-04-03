@@ -68,23 +68,24 @@ https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_%20Filtering/codes/My_V
 \item 
 \label{Python code}
 To filter the given file, we use Python 
-\lstinputlisting{./codes/1.py}\label{audio_filtering}
+\lstinputlisting{./codes/filter.py}\label{audio_filtering}		
 
 \item 
 \label{Visualization}
-The audio file is put through spectrum analysis using the code given in 
+The audio file is put through spectrum analysis using the codes given in 
 \begin{lstlisting}
-https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_%20Filtering/codes/spectrum.py
+https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_%20Filtering/codes/spectrum_with_noise.py
+https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_%20Filtering/codes/spectrum_without_noise.py
 \end{lstlisting}
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\columnwidth]{figs/Before_audiofilter.png }
+    \includegraphics[width=0.8\columnwidth]{figs/Spectrogram.png }
     \caption{Spectrogram: Pre-Filtering}
     \label{Spectrogram: Pre-Filter}
 \end{figure}
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\columnwidth]{figs/After_audiofilter.png}
+    \includegraphics[width=0.8\columnwidth]{figs/Spectrogram_Reduced_Noise.png}
     \caption{Spectrogram: Post Filtering}
     \label{Spectrogram: Post-Filter}
 \end{figure}
@@ -105,7 +106,7 @@ y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2),
 y(n) = 0, n < 0 \label{prob:2.2}
 \end{multline}
 Solve for $y(n)$ and Sketch $y(n)$ \\
-\solution  The C code calculates $y\brak{n}$ and generates values in a text file.
+\solution  The C code calculates $y\brak{n}$ and generates values in a dat file.
 \begin{lstlisting}
 https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/diff_eqn.c
 \end{lstlisting} 
@@ -226,7 +227,7 @@ known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
 \\
 \solution The following code plots the magnitude of transfer function.
 \begin{lstlisting}
-https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/3.5.py
+https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/Z-transfer.py
 \end{lstlisting}
 Substituting $z = e^{j \omega}$ in \eqref{eq:freq_resp}, we get
 \begin{align}
@@ -243,7 +244,7 @@ Therefore its fundamental period is $2\pi$ , which verifies that DTFT of a signa
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\columnwidth]{figs/H(z)_3.5.png}
+\includegraphics[width=\columnwidth]{figs/H(z)_1.png}
 \caption{$\abs{H\brak{e^{j\omega}}}$}
 \label{fig:H(z)_3.5}
 \end{figure}
@@ -468,7 +469,7 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 
 \solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
 \begin{lstlisting}
-https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6.1.py 
+https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6.filter.py 
 \end{lstlisting}
 \begin{figure}[H]
 \centering

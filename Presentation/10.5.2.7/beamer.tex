@@ -1,0 +1,110 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{gvv}
+%\usepackage{mihir}
+% \pagestyle{empty}% for cropping
+% \usepackage{minted,newtxtext,newtxmath,caption}
+% \newcommand\code{\texttt}
+% \newcommand\param{\textit}
+% \DeclareCaptionFont{bfmath}{\boldmath\bfseries}
+% \DeclareCaptionFormat{ruled}{\hrulefill\par#1#2#3}
+% \captionsetup{format=ruled,font=bfmath}
+\begin{document}
+
+\title{NCERT 10.5.2.7}
+\author{EE23BTECH11017 - Eachempati Mihir Divyansh$^{*}$}
+\date{}
+\frame{\titlepage}
+\begin{frame}   
+\frametitle{Question}
+Find the 31st term of an AP whose $11$th term is 38 and the $16$th term is 73.
+\end{frame}
+\begin{frame}{allowframebreaks}
+\frametitle{Given Informatn}
+\begin{table}
+    \centering
+   \begin{tabular}{|m{5em}|m{5em}| m{10em} | }
+    \hline
+    \textbf{Symbol} &\textbf{Value} &\textbf{Description} \\
+    \hline
+         $x\brak{0}$ & -32 & First term  \\
+    \hline
+        $x\brak{10}$ & 38  & $11$th term \\
+    \hline
+        $x\brak{15}$ & 73 & $16$th term\\
+    \hline
+        $d$ & 7 & Common Difference\\
+    \hline
+        $x\brak{n}$ & $x(0)+nd$ & $\brak{n+1}$th term\\
+    \hline
+    \end{tabular} 
+        \caption{Given Information}
+        \label{tab:1}
+    \end{table}
+\end{frame}
+\begin{frame}{allowframebreaks}
+\frametitle{Solution: Part 1}
+From \tabref{tab:1} 
+\begin{align}
+x\brak{0}+10d&=38\label{10.5.2.7.eq: 1}\\
+x\brak{0}+15d&=73 \label{10.5.2.7.eq: 2}
+\end{align}
+From  equations \ref{10.5.2.7.eq: 1} and \ref{10.5.2.7.eq: 2}, the augmented matrix is:
+\begin{align}
+ \myvec{
+   1 & 10 & 38
+   \\
+   1 & 15 & 73
+ } 
+\end{frame}
+\begin{frame}{allowframebreaks}
+    \frametitle{Expressing $x(0)$ and $r$ in terms of $x$ and $y$}
+    From \eqref{eqn: 2}, 
+    \begin{align}
+        r^6=\frac{y}{x}\;\;
+        &\implies r=\sqrt[6]{\frac{y}{x}}=\brak{\dfrac{y}{x}}^{\frac{1}{6}}\\
+        x\brak{0}=\frac{x}{r^3}\;\;
+        &\implies x\brak{0}=\brak{\dfrac{x^3}{y}}^{\frac{1}{2}}
+    \end{align}
+    Z-Transform of $x\brak{0}$
+    \begin{align}
+        X\brak{z}&=\frac{x\brak{0}}{1-rz^{-1}}\\
+        &=\dfrac{\brak{\frac{x^3}{y}}^{\frac{1}{2}}}{1-\brak{\frac{y}{x}}^{\frac{1}{6}}z^{-1}}
+    \end{align}
+\end{frame}
+\begin{frame}{allowframebreaks}
+    \frametitle{Exaample}
+    Let $x(0)=1$ and $r=1.2$
+\begin{align}
+    x=x\brak{3}=& \brak{1.2}^3 \\
+    y=x\brak{9}=&\brak{1.2}^9\\
+    z=x\brak{15}=&\brak{1.2}^{15}
+\end{align}
+\end{frame}
+\begin{minted}[bgcolor=bg, linenos, fontsize=\small, breaklines, language=c, lexer=minted-clang]{c}
+    #include<stdio.h>
+#include<math.h>
+
+int main(){
+    FILE *ptr;
+    ptr= fopen("series.dat", "w");
+    float x_0=1.0;
+    float r= 1.2;
+    for(int i=0; i<17; i++){
+        fprintf(ptr, "%f ", x_0*pow(r,i));
+    }
+    fprintf(ptr, "\b ");
+    return 0;
+}
+\end{minted}
+\end{frame}
+\end{document}
