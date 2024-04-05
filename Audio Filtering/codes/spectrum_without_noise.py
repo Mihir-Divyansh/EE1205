@@ -22,4 +22,4 @@ def plot_mel_spectrogram(audio_file):
     plt.savefig('../figs/Spectrogram_Reduced_Noise.png')
 
 # Example usage
-plot_mel_spectrogram('My_Voice_With_Reduced_Noise.wav')
+plot_mel_spectrogram('../figs/My_Voice_With_Reduced_Noise.wav')
