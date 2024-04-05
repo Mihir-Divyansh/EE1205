@@ -545,7 +545,29 @@ https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6_fi
 \caption{Frequency Response of Audio Filter}
 \label{fig:H(w)_6}
 \end{figure}
-
+The below code plots the Butterworth Filter in analog domain by using bilinear transform.
+    \begin{align}
+        z=\frac{1+sT/2}{1-sT/2}
+    \end{align}
+    \begin{lstlisting}
+https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_Filtering/codes/hn_analog_freq_response.py
+    \end{lstlisting}
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/Analog_Filter_Response.png}
+    \caption{Butterworth Filter Frequency response in analog domain}
+    \label{fig:H(w)_6}
+    \end{figure}
+The pole-zero plot of the given filter is plotted using the following code.
+\begin{lstlisting}
+https://github.com/Mihir_Divyansh/EE1205/blob/main/Audio_Filtering/codes/hn_pole_zero.py
+\end{lstlisting}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\columnwidth]{figs/Pole-Zero Plot.png}
+    \caption{Pole Zero Plot}
+    \label{fig:pole_zero}
+    \end{figure}
 
 
 \item What is the sampling frequency of the input signal?\\
