@@ -5,7 +5,7 @@ from numpy.polynomial import Polynomial as P
 from matplotlib import pyplot as plt
 
 def myfiltfilt(b, a, input_signal):
-    X = fft.fft(input_signal)
+    X = fft.fft(input_signal[:,0])
     w = np.linspace(0, 1, len(X) + 1)
     W = np.exp(2j*np.pi*w[:-1])
     B = (np.absolute(np.polyval(b,W)))**2
@@ -14,7 +14,7 @@ def myfiltfilt(b, a, input_signal):
     return fft.ifft(Y).real
 
 #read .wav file 
-input_signal,fs = sf.read('Dhanush-Singing.wav') 
+input_signal,fs = sf.read('My_Voice.wav') 
 print(len(input_signal))
 np.savetxt("in.txt", input_signal)
 
@@ -25,7 +25,7 @@ sampl_freq=fs
 order=4   
 
 #cutoff frquency 4kHz
-cutoff_freq=900.0  
+cutoff_freq=4000.0  
 
 #digital frequency
 Wn=2*cutoff_freq/sampl_freq  
@@ -39,8 +39,8 @@ output_signal = signal.filtfilt(b, a, input_signal)
 op1 = myfiltfilt(b, a, input_signal)
 x_plt = np.arange(len(input_signal))
 #Verify outputs by plotting
-plt.plot(x_plt[1000:10000], output_signal[1000:10000], 'b.',label='Output by built in function')
-plt.plot(x_plt[1000:10000], op1[1000:10000], 'r.',label='Output by not using built in function')
+plt.plot(x_plt[10000:15000], output_signal[10000:15000], 'b.',label='Output by built in function')
+plt.plot(x_plt[10000:15000], op1[10000:15000], 'r.',label='Output by not using built in function')
 plt.title("Verification of outputs of Audio Filter")
 plt.grid()
 plt.legend()
