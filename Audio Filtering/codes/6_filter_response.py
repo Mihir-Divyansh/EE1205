@@ -4,7 +4,7 @@ from scipy import signal
 import soundfile as sf
 
 #read .wav file 
-input_signal,fs = sf.read('Dhanush-Singing.wav') 
+input_signal,fs = sf.read('My_Voice.wav') 
 
 #sampling frequency 
 sampl_freq=fs
@@ -13,7 +13,7 @@ sampl_freq=fs
 order=4
 
 #cutoff frquency 4kHz
-cutoff_freq=1000.0 
+cutoff_freq=4000.0 
 
 #digital frequency
 Wn=2*cutoff_freq/sampl_freq  
@@ -36,4 +36,4 @@ plt.plot(omega, abs(H(np.exp(1j*omega))))
 plt.xlabel('$\omega$')
 plt.ylabel('$|H(e^{\jmath\omega})| $')
 plt.grid()
-plt.savefig("Filter_Response")
+plt.savefig("../figs/Filter_Response")
