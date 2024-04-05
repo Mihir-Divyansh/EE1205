@@ -34,14 +34,14 @@ Wn=2*cutoff_freq/sampl_freq
 b, a = signal.butter(order, Wn, 'low') 
 
 #filter the input signal with butterworth filter
-output_signal = signal.filtfilt(b, a, input_signal)
+output_signal = signal.filtfilt(b, a, input_signal, padlen =1)
 
 op1 = myfiltfilt(b, a, input_signal)
 x_plt = np.arange(len(input_signal))
 #Verify outputs by plotting
-plt.plot(x_plt[10000:15000], output_signal[10000:15000], 'b.',label='Output by built in function')
-plt.plot(x_plt[10000:15000], op1[10000:15000], 'r.',label='Output by not using built in function')
+plt.plot(x_plt[200000:205000], output_signal[200000:205000], 'b.',label='Output by built in function')
+plt.plot(x_plt[200000:205000], op1[200000:205000], 'r.',label='Output by not using built in function')
 plt.title("Verification of outputs of Audio Filter")
 plt.grid()
 plt.legend()
-plt.savefig("Audio_Filter_verf.png")
+plt.savefig("../figs/Audio_Filter_verf.png")

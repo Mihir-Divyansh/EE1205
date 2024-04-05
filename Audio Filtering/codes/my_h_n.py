@@ -14,7 +14,7 @@ print(sampl_freq)
 order = 4
 
 #cutoff frquency 
-cutoff_freq = 1000.0  
+cutoff_freq = 4000.0  
 
 #digital frequency
 Wn = 2 * cutoff_freq / sampl_freq  

@@ -432,8 +432,9 @@ where $\omega=e^{-\frac{j2\pi}{N}}$ . Now any DFT equation can be written as
 \end{align}
 Thus we can rewrite  \eqref{eq:fp} as:
 \begin{align}
-	\mtx{Y} = \mtx{X}\cdot\mtx{H} = \brak{\mtx{W}\mtx{x}}\cdot\brak{\mtx{W}\mtx{h}}
+	\mtx{Y} = \mtx{X}\odot\mtx{H} = \brak{\mtx{W}\mtx{x}}\odot\brak{\mtx{W}\mtx{h}}
 \end{align}
+This product is called the Hadamard product, computes element-wise multiplication.
 \end{enumerate}
 The below code computes $y\brak{n}$ by DFT Matrix and then plots it.
 \begin{lstlisting}
@@ -469,13 +470,13 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 
 \solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
 \begin{lstlisting}
-https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6.filter.py 
+https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/myfilter.py 
 \end{lstlisting}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{figs/Audio_Filter_verf.png}
 \caption{Both the outputs using and without using function overlap}
-\label{fig:6.1}
+\label{fig:myfilter}
 \end{figure}
 
 \item Repeat all the exercises in the previous sections for the above $a$ and $b$.\\
@@ -519,12 +520,12 @@ h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
 \end{align}
 The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plots $h\brak{n}$
 \begin{lstlisting}
-https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6.2.py
+https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/myfilter.py
 \end{lstlisting}
 \input{tables/audio_filter_tab}
 \begin{figure}[H]
 \centering
-\includegraphics[width=\columnwidth]{figs/h(n)_6.2.png}
+\includegraphics[width=\columnwidth]{figs/my_h_n.png}
 \caption{h(n) of Audio Filter}
 \label{fig:6.2_hn}
 \end{figure}
@@ -545,7 +546,29 @@ https://github.com/Mihir-Divyansh/EE1205/tree/main/Audio_%20Filtering/codes/6_fi
 \caption{Frequency Response of Audio Filter}
 \label{fig:H(w)_6}
 \end{figure}
-
+The below code plots the Butterworth Filter in analog domain by using bilinear transform.
+    \begin{align}
+        z=\frac{1+sT/2}{1-sT/2}
+    \end{align}
+    \begin{lstlisting}
+https://github.com/Mihir-Divyansh/EE1205/blob/main/Audio_Filtering/codes/hn_analog_freq_response.py
+    \end{lstlisting}
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/Analog_Filter_Response.png}
+    \caption{Butterworth Filter Frequency response in analog domain}
+    \label{fig:H(w)_6}
+    \end{figure}
+The pole-zero plot of the given filter is plotted using the following code.
+\begin{lstlisting}
+https://github.com/Mihir_Divyansh/EE1205/blob/main/Audio_Filtering/codes/hn_pole_zero.py
+\end{lstlisting}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\columnwidth]{figs/Pole-Zero Plot.png}
+    \caption{Pole Zero Plot}
+    \label{fig:pole_zero}
+    \end{figure}
 
 
 \item What is the sampling frequency of the input signal?\\
