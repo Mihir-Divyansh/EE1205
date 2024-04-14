@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.2.9)  13 APR 2024 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.2.9)  14 APR 2024 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,14 +1131,20 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
+) (./main.aux
+
+LaTeX Warning: Label `eq:h(n)desired_for_LPF' multiply defined.
+
+
+LaTeX Warning: Label `eq:h(n)desired_for_LPF' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 45.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 45.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -1249,6 +1255,8 @@ LaTeX Info: Redefining \ohm on input line 45.
 Package gensymb Info: Using \textohm for \ohm on input line 45.
 Package gensymb Info: Using \textmu for \micro on input line 45.
 Package hyperref Info: Link coloring OFF on input line 45.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1291,19 +1299,11 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 66.
-
-
-LaTeX Warning: Reference `filt_param' on page 1 undefined on input line 118.
-
-
-LaTeX Warning: Reference `eq:freq_transform' on page 1 undefined on input line 
-127.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<figs/HvE.png, id=50, 462.528pt x 346.896pt>
+<figs/HvE.png, id=89, 462.528pt x 346.896pt>
 File: figs/HvE.png Graphic file (type png)
 <use figs/HvE.png>
 Package pdftex.def Info: figs/HvE.png  used on input line 157.
@@ -1317,9 +1317,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--160
 Underfull \hbox (badness 3019) in paragraph at lines 150--160
 \OT1/txr/m/n/12 After the nec-es-sary sub-sti-tu-tions, we get
  []
-
-
-LaTeX Warning: Reference `eq:pole_ques' on page 2 undefined on input line 177.
 
 
 Overfull \hbox (26.1115pt too wide) detected at line 180
@@ -1338,7 +1335,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.189 \end{lstlisting}
                        <./figs/HvE.png>] (./tables/s_k.tex)
-<figs/sk_pole_zero.png, id=75, 462.528pt x 346.896pt>
+<figs/sk_pole_zero.png, id=115, 462.528pt x 346.896pt>
 File: figs/sk_pole_zero.png Graphic file (type png)
 <use figs/sk_pole_zero.png>
 Package pdftex.def Info: figs/sk_pole_zero.png  used on input line 196.
@@ -1349,42 +1346,21 @@ Overfull \hbox (3.01532pt too wide) detected at line 202
  []
 
 
-LaTeX Warning: Reference `tab: values of poles sk' on page 3 undefined on input
- line 203.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
-
-
-LaTeX Warning: Reference `eq:mag_freq_response' on page 3 undefined on input li
-ne 205.
-
-
-LaTeX Warning: Reference `eq:Gain_eq_LP' on page 3 undefined on input line 209.
-
-
-
-LaTeX Warning: Reference `eqn: magres' on page 3 undefined on input line 209.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
-<figs/Design vs Simulation.png, id=76, 462.528pt x 346.896pt>
+<figs/Design vs Simulation.png, id=120, 462.528pt x 346.896pt>
 File: figs/Design vs Simulation.png Graphic file (type png)
 <use figs/Design vs Simulation.png>
 Package pdftex.def Info: figs/Design vs Simulation.png  used on input line 218.
 
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-
-LaTeX Warning: Reference `eq:res1' on page 3 undefined on input line 236.
-
-
-LaTeX Warning: Reference `eq:res2' on page 3 undefined on input line 236.
-
 [3
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
@@ -1404,11 +1380,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.244 \end{align}
                   <./figs/sk_pole_zero.png> <./figs/Design vs Simulation.png>]
-
-LaTeX Warning: Reference `fig:anlg_resp' on page 4 undefined on input line 246.
-
-
-<figs/Band_Pass_Filter.png, id=100, 462.528pt x 346.896pt>
+<figs/Band_Pass_Filter.png, id=149, 462.528pt x 346.896pt>
 File: figs/Band_Pass_Filter.png Graphic file (type png)
 <use figs/Band_Pass_Filter.png>
 Package pdftex.def Info: figs/Band_Pass_Filter.png  used on input line 249.
@@ -1419,25 +1391,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--253
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 244--253
-\OT1/txr/m/n/12 In Fig-ure [], we present the mag-ni-tude
+Underfull \hbox (badness 6510) in paragraph at lines 244--253
+\OT1/txr/m/n/12 and neg-a-tive fre-quen-cies. The pass-band
  []
 
 
-LaTeX Warning: Reference `eq:magnitude_bandpass_analog' on page 4 undefined on 
-input line 260.
+Underfull \hbox (badness 1533) in paragraph at lines 244--253
+\OT1/txr/m/n/12 and stop-band fre-quen-cies de-picted in the
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 244--253
+\OT1/txr/m/n/12 fig-ure ex-hibit close align-ment with those
+ []
 
 
 Overfull \hbox (8.57915pt too wide) detected at line 264
 []
  []
 
-<figs/digital_bp.png, id=101, 462.528pt x 346.896pt>
+<figs/digital_bp.png, id=151, 462.528pt x 346.896pt>
 File: figs/digital_bp.png Graphic file (type png)
 <use figs/digital_bp.png>
 Package pdftex.def Info: figs/digital_bp.png  used on input line 271.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/Digital_BPF.png, id=102, 462.528pt x 346.896pt>
+<figs/Digital_BPF.png, id=152, 462.528pt x 346.896pt>
 File: figs/Digital_BPF.png Graphic file (type png)
 <use figs/Digital_BPF.png>
 Package pdftex.def Info: figs/Digital_BPF.png  used on input line 277.
@@ -1462,11 +1440,7 @@ s been already used, duplicate ignored
 l.296 \end{align}
                   <./figs/Band_Pass_Filter.png> <./figs/digital_bp.png> <./figs
 /Digital_BPF.png>]
-
-LaTeX Warning: Reference `eq:h(n)_for_LPF' on page 5 undefined on input line 29
-7.
-
-<figs/Impulse Response.png, id=120, 722.7pt x 433.62pt>
+<figs/Impulse Response.png, id=168, 722.7pt x 433.62pt>
 File: figs/Impulse Response.png Graphic file (type png)
 <use figs/Impulse Response.png>
 Package pdftex.def Info: figs/Impulse Response.png  used on input line 300.
@@ -1476,12 +1450,12 @@ Overfull \hbox (18.80449pt too wide) detected at line 313
 []
  []
 
-<figs/FIR_Lowpass_Filter.png, id=121, 462.528pt x 346.896pt>
+<figs/FIR_Lowpass_Filter.png, id=169, 462.528pt x 346.896pt>
 File: figs/FIR_Lowpass_Filter.png Graphic file (type png)
 <use figs/FIR_Lowpass_Filter.png>
 Package pdftex.def Info: figs/FIR_Lowpass_Filter.png  used on input line 357.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/FIR_Bandpass_Filter.png, id=122, 462.528pt x 346.896pt>
+<figs/FIR_Bandpass_Filter.png, id=170, 462.528pt x 346.896pt>
 File: figs/FIR_Bandpass_Filter.png Graphic file (type png)
 <use figs/FIR_Bandpass_Filter.png>
 Package pdftex.def Info: figs/FIR_Bandpass_Filter.png  used on input line 389.
@@ -1509,28 +1483,19 @@ l.393 \end{document}
 
  <./figs/FIR_Bandpass_Filter.png>] (./main.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  451AC26EB16F3C8F83F5B8F56CB8F77F;1671.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 451AC26EB16F3C8F83F5B8F56CB8F77F;1671.
  ) 
 Here is how much of TeX's memory you used:
- 30948 strings out of 476091
- 605029 string characters out of 5794082
+ 30964 strings out of 476091
+ 605230 string characters out of 5794082
  1887330 words of memory out of 5000000
- 50540 multiletter control sequences out of 15000+600000
- 605322 words of font info for 233 fonts, out of 8000000 for 9000
+ 50552 multiletter control sequences out of 15000+600000
+ 603972 words of font info for 231 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,22n,96p,1172b,1208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,22n,96p,1172b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1541,10 +1506,10 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on main.pdf (6 pages, 337090 bytes).
+Output written on main.pdf (6 pages, 336874 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
  98 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
