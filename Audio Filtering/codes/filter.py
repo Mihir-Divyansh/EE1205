@@ -9,7 +9,7 @@ input_signal,f_s = sf.read('My_Voice.wav')
 
 order=4 #Setting the order of the filter
 
-f_c=1000.0  #cutoff frquency 
+f_c=4000.0  #cutoff frquency 
 
 Wn=2*f_c/f_s   #digital frequency
 

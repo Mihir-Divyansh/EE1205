@@ -9,7 +9,7 @@ sampl_freq = fs
 
 order = 4
 
-cutoff_freq = 2000.0
+cutoff_freq = 4000.0
 
 Wn = 2 * cutoff_freq / sampl_freq  
 
